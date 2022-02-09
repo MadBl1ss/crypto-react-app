@@ -11,6 +11,7 @@ const Nft = () => {
     const [nft, setNft] = useState([])
     const [searchTerm, setSearchTerm] = useState('')
 
+    console.log(nftList)
     useEffect(() => {
         const filteredData = nftList?.list?.filter((nft) => nft.name.toLowerCase().includes(searchTerm.toLowerCase())) 
         setNft(filteredData);

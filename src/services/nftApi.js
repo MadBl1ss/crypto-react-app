@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 const nftHeaders = {
     'x-rapidapi-host': 'rarible-data-scraper.p.rapidapi.com',
-    'x-rapidapi-key': 'fd3ddc3205msh32e9cb483985c09p15a16bjsne5657179e67a'
+    'x-rapidapi-key': '1dcb4cf988mshcb8507ee1aabde7p1ed060jsn3db938efe772'
   }
 
 const baseUrl = 'https://rarible-data-scraper.p.rapidapi.com'

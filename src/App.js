@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
-import { Navbar, Exchanges, Homepage, Cryptocurrencies, News, CryptoDetails, Nft } from './components';
+import { Navbar, Homepage, Cryptocurrencies, News, CryptoDetails, Nft } from './components';
 import './App.css'
 
 const App = () => {
@@ -15,9 +15,11 @@ const App = () => {
                         <Routes>
                             <Route path="/" element={<Homepage />} />
                             <Route path="/nft" element={<Nft />} />
-                            <Route path='/exchanges' element={<Exchanges/>} />
+                            {/* После миграции coinranks API до версии 2, 
+                            доступ к информации по обмену стал доступен только в премиум подписке 
+                            <Route path='/exchanges' element={<Exchanges/>} /> */}
                             <Route path='/cryptocurrencies' element={<Cryptocurrencies/>} />
-                            <Route exact path='/crypto/:coinId' element={<CryptoDetails/>} />
+                            <Route exact path='/crypto/:uuid' element={<CryptoDetails/>} />
                             <Route path='/news' element={<News />} />  
                         </Routes>
                     </div>
@@ -25,11 +27,11 @@ const App = () => {
             <div className="footer">
                 <Typography.Title level={5} style={{color: 'white', textAlign: 'center'}}>
                     Orion Crypto<br />
-                    2021 
+                    2022 
                     </Typography.Title>
                     <Space>
                         <Link to="">Home</Link>
-                        <Link to="/exchanges">Exchanges</Link>
+                        {/* <Link to="/exchanges">Exchanges</Link> */}
                         <Link to="/news">News</Link>
                     </Space>
                     </div>
